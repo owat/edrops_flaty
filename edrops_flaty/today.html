@@ -152,6 +152,12 @@ color:#000000;
                                         var output = "";
                                         if (data.length > 0)
                                         {
+                                            if(data.length == 1 && data[0] == "failed" )
+                                    {
+                                        window.location = "index.html";
+                                    }
+                                    else
+                                    {
                                             for (i=0; i< data.length; i++)
                                             {
                                                 output += "<li><div class='lImage'><image class='eImage'src='http://firstaid-supply.com/picturesweb/Eye%20Care/Aditionaleye/m-702-12t.jpg'/></div>";
@@ -164,7 +170,9 @@ color:#000000;
                                             }
                                             
                                         }
+                                            }
                                         document.getElementById("todayList").innerHTML = output;
+                                       
                                     }
                                     
                                     </script>
@@ -202,7 +210,7 @@ color:#000000;
           </div>
             <div class="decoration"></div>
       <ul id="todayList" ></ul>
-      <div class="decoration"></div>
+
       
           
       </div>
